@@ -1,0 +1,16 @@
+services:
+  db :
+    build :
+      context: ./Docker/DB
+    image : kartikeyasoft/ksdbs
+    container_name: ksdbs
+    ports:
+      - "3306:3306"
+
+  server:
+    build: 
+      context: ./Docker/server
+    image : kartikeyasoft/ksserver
+    container_name: kseureka
+    ports:
+      - "8761:8761"
