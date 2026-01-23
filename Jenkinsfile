@@ -4,14 +4,14 @@ pipeline {
 	}
 	environment {
 		COMPOSE_FILE = 'compose.yaml'
-        DOCKER_REGISTRY = 'kartikeyasoft'
+        DOCKER_REGISTRY = 'jyothi160/jyothik8s'
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
 	}
 
     stages {
         stage('Code Checkout') {
             steps {
-             git branch: 'main', credentialsId: 'git', url: 'https://github.com/ksrepo9/ksk8spro.git'
+             git branch: 'main', credentialsId: 'git', url: 'https://github.com/jyothi3673/ksk8.git'
 
             }
         }
